@@ -16,14 +16,15 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-50 font-sans selection:bg-indigo-500/30">
-      {/* Background Decorative Blobs */}
+    <div className="min-h-screen bg-[#101317] text-white font-sans selection:bg-indigo-500/30 relative overflow-hidden">
+      {/* Background Decorative Blobs from Figma */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-indigo-600/10 rounded-full blur-[120px]" />
-        <div className="absolute bottom-[20%] right-[-10%] w-[50%] h-[50%] bg-purple-600/10 rounded-full blur-[150px]" />
+        <div className="absolute top-[37px] left-[76px] w-[289px] h-[261px] bg-indigo-600/10 rounded-full blur-[120px]" />
+        <div className="absolute top-[1200px] left-[137px] w-[289px] h-[261px] bg-purple-600/10 rounded-full blur-[150px]" />
+        <div className="absolute top-[1762px] left-[32px] w-[351px] h-[446px] bg-indigo-500/5 rounded-full blur-[100px]" />
       </div>
 
-      <main className="relative z-10 max-w-md mx-auto min-h-screen border-x border-white/5 bg-slate-950/40 backdrop-blur-3xl shadow-2xl">
+      <main className="relative z-10 max-w-md mx-auto min-h-screen bg-[#101317]/20 backdrop-blur-[2px]">
         <Header />
         <SearchBar />
         <HighlightCard />

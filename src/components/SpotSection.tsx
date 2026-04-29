@@ -1,8 +1,8 @@
 import React from 'react';
 import mapIcon from '../assets/map.svg';
-import starIcon from '../assets/filled.svg';
+import heartIcon from '../assets/filled.svg'; // Should be heart but using filled star if no heart in assets
 import expandIcon from '../assets/agrandir.svg';
-import routingIcon from '../assets/map.svg'; // Should be routing but using map for now if not found
+import routingIcon from '../assets/map.svg';
 import { Button } from './ui/button';
 
 // Using the AI generated images for spots as they are higher quality than the placeholders
@@ -11,7 +11,7 @@ import lakeImg from '/images/lake.png';
 import coastImg from '/images/coast.png';
 
 const SpotCard = ({ name, location, image }: { name: string, location: string, image: string }) => (
-  <div className="w-[342px] h-[98px] bg-[#1C243F] border border-[#3E4664] rounded-[25px] p-[10px] flex items-center gap-[9px] mb-[12px] group hover:bg-[#252D4D] transition-all relative">
+  <div className="w-[342px] min-h-[98px] bg-[#1C243F] border border-white rounded-[25px] p-[10px] flex items-center gap-[9px] mb-[12px] group hover:bg-[#252D4D] transition-all relative">
     <div className="w-[68px] h-[78px] rounded-[15px] overflow-hidden border-[0.5px] border-white shrink-0">
       <img src={image} alt={name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
     </div>
@@ -25,8 +25,8 @@ const SpotCard = ({ name, location, image }: { name: string, location: string, i
         <span className="text-[14px] font-light text-[#DCCCFF] truncate">{location}</span>
       </div>
     </div>
-    <button className="absolute right-[10px] top-[10px] p-1 transition-all text-white/40 hover:text-white">
-      <img src={starIcon} alt="Favorite" className="w-[24px] h-[24px] opacity-40 hover:opacity-100 transition-opacity" />
+    <button className="absolute right-[10px] top-[10px] p-1 transition-all">
+      <img src={heartIcon} alt="Favorite" className="w-[24px] h-[24px] opacity-40 hover:opacity-100 transition-opacity" />
     </button>
   </div>
 );
@@ -36,26 +36,26 @@ export const SpotSection = () => {
     <section className="px-[24px] mb-[120px]">
       <div className="mb-[24px]">
         <h2 className="text-[20px] font-bold text-white mb-1">Carte des meilleurs spots</h2>
-        <p className="text-[14px] text-white/50 font-light leading-[19px]">Trouve et enregistre tes meilleurs spots d’observation.</p>
+        <p className="text-[16px] text-white font-normal leading-[19px]">Trouve et enregistre tes meilleurs spots d’observation.</p>
       </div>
       
       <div className="w-[342px] h-[188px] relative rounded-[25px] overflow-hidden border border-white/20 mb-[24px] group cursor-pointer">
         <div className="absolute inset-0 bg-[url('https://api.maptiler.com/maps/darkmatter/static/auto/600x300.png?key=get_your_own_key')] bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-1000" />
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
         
         <div className="absolute top-[16px] right-[16px] w-[32px] h-[32px] rounded-full bg-white/20 backdrop-blur-md border border-white/20 hover:bg-white/30 transition-all flex items-center justify-center">
           <img src={expandIcon} alt="Expand" className="w-[20px] h-[20px] invert" />
         </div>
 
-        <div className="absolute bottom-[20px] left-[20px] flex items-center gap-2.5 bg-indigo-600/90 backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-lg">
+        <div className="absolute bottom-[20px] left-[20px] flex items-center gap-2.5 bg-[#582FEF] backdrop-blur-md px-4 py-2 rounded-full border border-white/20 shadow-lg">
           <div className="w-2 h-2 bg-white rounded-full animate-pulse shadow-[0_0_8px_white]" />
-          <span className="text-[10px] font-bold text-white uppercase tracking-widest">25/01 - Bonnes conditions</span>
+          <span className="text-[14px] font-medium text-white uppercase">25/01 - <span className="font-bold">Bonnes conditions</span></span>
         </div>
       </div>
 
       <div className="mb-[24px]">
         <h3 className="text-[20px] font-bold text-white mb-1">Pour toi</h3>
-        <p className="text-[14px] text-white/50 font-light leading-[19px]">Ces spots pourraient t’intéresser !</p>
+        <p className="text-[16px] text-white font-normal leading-[19px]">Ces spots pourraient t’intéresser !</p>
       </div>
 
       <div className="flex flex-col">

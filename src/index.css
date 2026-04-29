@@ -123,7 +123,7 @@
     @apply border-border outline-ring/50;
     }
   body {
-    @apply bg-slate-950 text-foreground overflow-x-hidden;
+    @apply bg-[#101317] text-white overflow-x-hidden;
     }
   button:not(:disabled), [role="button"]:not(:disabled) {
     cursor: pointer;
