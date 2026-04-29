@@ -1,22 +1,24 @@
 import React from 'react';
-import { IconDroplet, IconCloud, IconTelescope } from '@tabler/icons-react';
+import dropIcon from '../assets/drop.svg';
+import cloudIcon from '../assets/cloud.svg';
+import sunFogIcon from '../assets/sun-fog.svg';
 
-const Chip = ({ icon: Icon, label, value }: { icon: any, label: string, value: string }) => (
-  <div className="flex-1 flex flex-col gap-2 p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-md">
-    <div className="flex items-center gap-2 text-slate-400">
-      <Icon size={14} />
-      <span className="text-[10px] uppercase tracking-wider font-bold">{label}</span>
+const Chip = ({ icon, label, value }: { icon: string, label: string, value: string }) => (
+  <div className="flex-1 flex flex-col gap-2 p-4 rounded-[25px] bg-[#1C243F] border border-[#3E4664] shadow-lg">
+    <div className="flex items-center gap-2 opacity-60">
+      <img src={icon} alt="" className="w-4 h-4" />
+      <span className="text-[10px] uppercase font-bold tracking-wider text-white">{label}</span>
     </div>
-    <span className="text-lg font-bold text-white">{value}</span>
+    <span className="text-xl font-bold text-white">{value}</span>
   </div>
 );
 
 export const InfoChips = () => {
   return (
-    <div className="flex gap-3 px-6 mb-10 overflow-x-auto pb-2 no-scrollbar">
-      <Chip icon={IconDroplet} label="Humidité" value="45%" />
-      <Chip icon={IconCloud} label="Ciel dégagé" value="16%" />
-      <Chip icon={IconTelescope} label="Échelle de Bortle" value="Classe 4" />
+    <div className="flex gap-4 px-6 mb-10 overflow-x-auto no-scrollbar">
+      <Chip icon={dropIcon} label="Humidité" value="45%" />
+      <Chip icon={cloudIcon} label="Ciel dégagé" value="16%" />
+      <Chip icon={sunFogIcon} label="Pollution" value="Classe 4" />
     </div>
   );
 };
