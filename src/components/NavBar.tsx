@@ -25,7 +25,7 @@ const NavItem = ({ icon, label, active = false }: { icon: string, label: string,
 export const NavBar = () => {
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 px-[24px] pb-[40px] pt-4 pointer-events-none">
-      <div className="mx-auto w-[342px] h-[64px] bg-[#1C243F]/90 backdrop-blur-2xl border border-white/10 rounded-[32px] px-[20px] flex justify-between items-center shadow-2xl shadow-black/60 pointer-events-auto">
+      <div className="mx-auto w-full h-[64px] bg-[#1C243F]/90 backdrop-blur-2xl border border-white/10 rounded-[32px] px-[20px] flex justify-between items-center shadow-2xl shadow-black/60 pointer-events-auto">
         <NavItem icon={homeIcon} label="Accueil" active />
         <NavItem icon={mapIcon} label="Carte" />
         <NavItem icon={gamesIcon} label="Jeux" />

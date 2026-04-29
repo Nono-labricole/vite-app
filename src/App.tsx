@@ -24,7 +24,7 @@ function App() {
         <div className="absolute top-[1762px] left-[32px] w-[351px] h-[446px] bg-indigo-500/5 rounded-full blur-[100px]" />
       </div>
 
-      <main className="relative z-10 max-w-md mx-auto min-h-screen bg-[#101317]/20 backdrop-blur-[2px]">
+      <main className="relative z-10 max-w-[390px] mx-auto min-h-screen bg-[#101317]/20 backdrop-blur-[2px]">
         <Header />
         <SearchBar />
         <HighlightCard />

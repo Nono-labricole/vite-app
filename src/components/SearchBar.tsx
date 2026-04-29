@@ -4,7 +4,7 @@ import searchIcon from '../assets/search.svg';
 export const SearchBar = () => {
   return (
     <div className="px-[24px] mb-[24px]">
-      <div className="w-[342px] h-[38px] bg-[#1C243F] border border-white/20 rounded-[25px] flex items-center px-[20px] gap-[16px]">
+      <div className="w-full h-[38px] bg-[#1C243F] border border-white/20 rounded-[25px] flex items-center px-[20px] gap-[16px]">
         <img src={searchIcon} alt="" className="w-[20px] h-[20px] opacity-70" />
         <input
           type="text"

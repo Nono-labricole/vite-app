@@ -4,7 +4,7 @@ import logo from '../assets/Logo.svg';
 
 export const AuthPage = ({ onLogin }: { onLogin: () => void }) => {
   return (
-    <div className="min-h-screen bg-[#101317] flex flex-col items-center justify-between px-[24px] py-[100px] font-sans text-white overflow-hidden relative">
+    <div className="min-h-screen bg-[#101317] flex flex-col items-center justify-between px-[24px] py-[100px] font-sans text-white overflow-hidden relative max-w-[390px] mx-auto">
       {/* Background Decorative Blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-full h-full bg-indigo-600/5 rounded-full blur-[150px]" />
@@ -31,17 +31,17 @@ export const AuthPage = ({ onLogin }: { onLogin: () => void }) => {
       </div>
 
       {/* Buttons */}
-      <div className="w-[342px] flex flex-col gap-[18px] relative z-10 animate-in slide-in-from-bottom duration-700 delay-500">
+      <div className="w-full max-w-[342px] flex flex-col gap-[18px] relative z-10 animate-in slide-in-from-bottom duration-700 delay-500">
         <Button 
           onClick={onLogin}
-          className="w-[342px] h-[40px] rounded-[25px] bg-gradient-to-r from-[#8862FE] to-[#544AE8] text-white font-normal text-base shadow-[0_4px_14px_rgba(106,82,239,0.32)] hover:opacity-90 transition-all active:scale-95"
+          className="w-full h-[40px] rounded-[25px] bg-gradient-to-r from-[#8862FE] to-[#544AE8] text-white font-normal text-base shadow-[0_4px_14px_rgba(106,82,239,0.32)] hover:opacity-90 transition-all active:scale-95"
         >
           Connexion
         </Button>
         
         <Button 
           variant="outline"
-          className="w-[342px] h-[40px] rounded-[25px] border border-white bg-[#DCCCFF]/20 hover:bg-[#DCCCFF]/30 text-white font-normal text-base transition-all active:scale-95 flex items-center justify-center"
+          className="w-full h-[40px] rounded-[25px] border border-white bg-[#DCCCFF]/20 hover:bg-[#DCCCFF]/30 text-white font-normal text-base transition-all active:scale-95 flex items-center justify-center"
         >
           Créer un compte
         </Button>

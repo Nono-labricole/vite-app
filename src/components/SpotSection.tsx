@@ -11,7 +11,7 @@ import lakeImg from '/images/lake.png';
 import coastImg from '/images/coast.png';
 
 const SpotCard = ({ name, location, image }: { name: string, location: string, image: string }) => (
-  <div className="w-[342px] min-h-[98px] bg-[#1C243F] border border-white rounded-[25px] p-[10px] flex items-center gap-[9px] mb-[12px] group hover:bg-[#252D4D] transition-all relative">
+  <div className="w-full min-h-[98px] bg-[#1C243F] border border-white rounded-[25px] p-[10px] flex items-center gap-[9px] mb-[12px] group hover:bg-[#252D4D] transition-all relative">
     <div className="w-[68px] h-[78px] rounded-[15px] overflow-hidden border-[0.5px] border-white shrink-0">
       <img src={image} alt={name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
     </div>
@@ -39,7 +39,7 @@ export const SpotSection = () => {
         <p className="text-[16px] text-white font-normal leading-[19px]">Trouve et enregistre tes meilleurs spots d’observation.</p>
       </div>
       
-      <div className="w-[342px] h-[188px] relative rounded-[25px] overflow-hidden border border-white/20 mb-[24px] group cursor-pointer">
+      <div className="w-full h-[188px] relative rounded-[25px] overflow-hidden border border-white/20 mb-[24px] group cursor-pointer">
         <div className="absolute inset-0 bg-[url('https://api.maptiler.com/maps/darkmatter/static/auto/600x300.png?key=get_your_own_key')] bg-cover bg-center opacity-70 group-hover:scale-105 transition-transform duration-1000" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
         
@@ -64,7 +64,7 @@ export const SpotSection = () => {
         <SpotCard name="Piriac sur mer" location="90 km à l'ouest de Nantes" image={coastImg} />
       </div>
 
-      <Button className="w-[342px] h-[40px] rounded-[25px] bg-gradient-to-r from-[#8862FE] to-[#544AE8] text-white font-normal text-base mt-[32px] shadow-[0_4px_14px_rgba(106,82,239,0.32)] hover:opacity-90 transition-all">
+      <Button className="w-full h-[40px] rounded-[25px] bg-gradient-to-r from-[#8862FE] to-[#544AE8] text-white font-normal text-base mt-[32px] shadow-[0_4px_14px_rgba(106,82,239,0.32)] hover:opacity-90 transition-all">
         Tout voir
       </Button>
     </section>
