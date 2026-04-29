@@ -33,7 +33,7 @@ export const EventSection = () => {
     <section className="mb-[32px]">
       <div className="px-[24px] mb-[24px]">
         <h2 className="text-[20px] font-bold text-white mb-1">Évènements à venir</h2>
-        <p className="text-[16px] text-white font-normal leading-[19px]">Active les rappels et ne rate aucuns événements !</p>
+        <p className="text-[16px] text-white font-normal leading-[19px]">Active les rappels et ne rate aucun événement !</p>
       </div>
       
       <div className="flex gap-[24px] px-[24px] overflow-x-auto pb-4 no-scrollbar">

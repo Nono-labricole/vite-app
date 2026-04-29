@@ -8,7 +8,7 @@ const Chip = ({ icon, label, value, valueSize = "text-[14.93px]" }: { icon: stri
     <div className="flex flex-col gap-[24px] w-full">
       <div className="flex items-center justify-center gap-[5px] w-full">
         <img src={icon} alt="" className="w-[19.901px] h-[19.901px]" />
-        <span className="text-[10.13px] text-[#DCCCFF] font-light leading-[15px]">{label}</span>
+        <span className="text-[12px] text-[#DCCCFF] font-light leading-[15px]">{label}</span>
       </div>
       <span className={`${valueSize} font-bold text-white leading-[18px]`}>{value}</span>
     </div>

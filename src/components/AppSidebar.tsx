@@ -56,7 +56,7 @@ export function AppSidebar() {
       </SidebarHeader>
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel className="text-[#DCCCFF]/50 px-6 py-4 text-[10px] uppercase tracking-widest font-bold">Menu</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-[#DCCCFF]/80 px-6 py-4 text-[10px] uppercase tracking-widest font-bold">Menu Principal</SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="px-3">
               {items.map((item) => (
