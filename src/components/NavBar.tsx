@@ -6,8 +6,13 @@ import searchIcon from '../assets/search.svg';
 import profileIcon from '../assets/profile.svg';
 import { cn } from '../lib/utils';
 
-const NavItem = ({ icon, label, active = false }: { icon: string, label: string, active?: boolean }) => (
-  <button className={cn(
+interface NavBarProps {
+  activeTab?: string;
+  onTabChange?: (tab: string) => void;
+}
+
+const NavItem = ({ icon, label, id, active = false, onClick }: { icon: string, label: string, id: string, active?: boolean, onClick?: () => void }) => (
+  <button onClick={onClick} className={cn(
     "flex flex-col items-center justify-center w-[52px] h-[50px] transition-all duration-300",
     active ? "scale-100" : "opacity-40 hover:opacity-100"
   )}>
@@ -22,15 +27,15 @@ const NavItem = ({ icon, label, active = false }: { icon: string, label: string,
   </button>
 );
 
-export const NavBar = () => {
+export const NavBar = ({ activeTab = 'home', onTabChange }: NavBarProps) => {
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-50 px-[24px] pb-[40px] pt-4 pointer-events-none">
       <div className="mx-auto w-full h-[64px] bg-[#1C243F]/90 backdrop-blur-2xl border border-white/10 rounded-[32px] px-[20px] flex justify-between items-center shadow-2xl shadow-black/60 pointer-events-auto">
-        <NavItem icon={homeIcon} label="Accueil" active />
-        <NavItem icon={mapIcon} label="Carte" />
-        <NavItem icon={gamesIcon} label="Jeux" />
-        <NavItem icon={searchIcon} label="Chercher" />
-        <NavItem icon={profileIcon} label="Profil" />
+        <NavItem id="home" icon={homeIcon} label="Accueil" active={activeTab === 'home'} onClick={() => onTabChange?.('home')} />
+        <NavItem id="map" icon={mapIcon} label="Carte" active={activeTab === 'map'} onClick={() => onTabChange?.('map')} />
+        <NavItem id="games" icon={gamesIcon} label="Jeux" active={activeTab === 'games'} onClick={() => onTabChange?.('games')} />
+        <NavItem id="search" icon={searchIcon} label="Chercher" active={activeTab === 'search'} onClick={() => onTabChange?.('search')} />
+        <NavItem id="profile" icon={profileIcon} label="Profil" active={activeTab === 'profile'} onClick={() => onTabChange?.('profile')} />
       </div>
     </nav>
   );
